@@ -2,7 +2,25 @@ $('button.detail').click(function () {
 	
 });
 
+var ajax_data;
+var ajax_index = 0;
+
 $(document).ready(function(){
+	$.ajax({
+	    url:'http://ec2-54-64-159-57.ap-northeast-1.compute.amazonaws.com:7700/dataspider/trigger/yazyu',
+	    type: 'GET'
+	})
+	.done(function(data){
+		ajax_data = data;
+	    $('.result').html(data);
+	    changeFloor();
+	    console.log(data);
+	})
+	.fail(function(data){
+	    $('.result').html(data);
+	    console.log(data);
+	});
+
 	$('img.door_left').animate({
 		'marginLeft':'-52%',
 	}, 1000);
@@ -11,6 +29,27 @@ $(document).ready(function(){
 	}, 1200);
 });
 
+function changeFloor() {
+	$("header h2").text(ajax_data.projects[ajax_index].name);
+	$("div.project_name p").text(ajax_data.projects[ajax_index].title);
+	$("div.detail-text").text(ajax_data.projects[ajax_index].detail);
+	$("div.project_name p").text(ajax_data.projects[ajax_index].title);
+	$("div.now-money p.value").text(ajax_data.projects[ajax_index].backerAmount + "円");
+	$("div.future-money p.value").text(ajax_data.projects[ajax_index].targetAmount + "円");
+	$("div.now-patron p.now-patron-value").text(ajax_data.projects[ajax_index].patron + "人");
+	$("div.arrow-and-text p").text(ajax_data.projects[ajax_index].name);
+	$("div#explan").text(ajax_data.projects[ajax_index].profile);
+	var video = $('video').get(0);
+	video.src = ajax_data.projects[ajax_index].movieUrl;
+	video.play();
+	$("div.detail_header").css({
+		'background':'url(' + ajax_data.projects[ajax_index].eyecatch + ')' 
+	})
+
+	var percent = ajax_data.projects[ajax_index].backerAmount / ajax_data.projects[ajax_index].targetAmount;
+	$("div#pacent").text(percent * 100 + "%");
+}
+
 $('button.skip').click(function() {
 	$('img.door_right').animate({
 		'marginLeft':'0'
@@ -18,6 +57,16 @@ $('button.skip').click(function() {
 	$('img.door_left').animate({
 		'marginLeft':'0',
 	}, 1000);
+
+	ajax_index++;
+	changeFloor();
+
+	$('img.door_left').animate({
+		'marginLeft':'-52%',
+	}, 1000);
+	$('img.door_right').animate({
+		'marginLeft':'-102%'
+	}, 1200);
 });
 
 $('button.detail').click(function() {
@@ -53,15 +102,6 @@ function updateProgress () {
 	per.innerHTML = width + "%";
 }
 
-var now_exp = 0;
-
-function openExplan () {
-	if (now_exp == 0){
- 		elem = document.getElementById("explan").innerHTML = "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。"//data[]とかする（？）
- 		window.scrollBy(0,70);
- 		now_exp = 1;
-	} else {
-		elem = document.getElementById("explan").innerHTML = " ";
-		now_exp = 0;
-	}
-}
+$('div.arrow-and-text').click(function(){
+	$("#explan").toggle();
+});

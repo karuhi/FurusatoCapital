@@ -84,7 +84,7 @@ div.detail {
 /* for detail */
 div.detail_header {
 	position: relative;
-	background: url(../images/detail-image-hedder.jpg);
+	background-image: url(../images/detail-image-hedder.jpg);
 	background-size: cover;
 	height: 250px;
 }
@@ -208,6 +208,7 @@ div.arrow-and-text {
 	background-size: 30px;
 	padding-left: 40px;
 	border-bottom: dashed 1px #474747;
+	margin-bottom: 120px;
 }
 
 div.arrow-and-text p {
@@ -216,6 +217,7 @@ div.arrow-and-text p {
 }
 
 div#explan {
+	display: none;
 	margin: 10px 30px;
 	padding-bottom: 80px;
 }
