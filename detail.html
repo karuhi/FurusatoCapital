@@ -14,73 +14,114 @@
 }
 .cover-color{
 	top: 0;
-	position: fixed;
+	position: absolute;
 	background:linear-gradient(rgba(0,0,0,0),#D37121);
 	width: 100%;
-	height: 48%;
+	height: 39%;
 
 }
 .image-hedder{
-	top:35%;
-	position: fixed;
+	top:28%;
+	position: absolute;
 	color: white;
 	z-index: 2;
-	font-size: 40px;
+	font-size: 20px;
 	margin-left: 20px; 
 	margin-right: 20px;
 }
-.detail-text , .profile-area{
+.detail-text{
 	font-size:20px;
+	margin-left: 30px; 
+	margin-right: 30px;
+}
+.profile-area{
+	font-size:15px;
 	margin-left: 30px; 
 	margin-right: 30px;
 }
 .fixed-menu-with-icon {
 	position: fixed;
 	bottom: 0;
-	background: #D37121;
+	background: #FF5E5E;
 	width: 100%;
 	height: 10%;
-	font-size: 40px;
+	font-size: 25px;
 	text-align: center;
 	border-top: 20px;
 	border-bottom: 20px;
 }
 .profile-area{
+	margin-top: 10px;
 	background: #D8D8D8;
 }
-.future-money-text {
-text-align: center;
-margin: 0px auto;
+.bad{
+	position: fixed;
+	z-index: 3;
+}
+progress {
+	background-color: #FF5E5E;
+	width: 80%;
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    margin-left: 10%; 
+	margin-right: 10%;
+	border-radius: 10px;
+}
+progress::-webkit-progress-bar {background-color: gray; width: 100%;border-radius: 10px;}
+progress::-webkit-progress-value {background-color: #D37121 !important;border-radius: 10px;}
+.now-money-text , .now-money {
+		margin-left: 10%; 
+	margin-right: 10%;
+}
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #D37121;
 }
 </style>
 </head>
 <body>
 
 <!--ここから中身-->
-
+<div class="bad"><img src="images/close.png" width="30%"></div>
 <!--TOP-->
 <img src="images/detail-image-hedder.jpg"  width="100%" />
 <div class="image-hedder">地域の名産品を使った料理とお酒を楽しめるバーを開店したい。</div>
 <div class="cover-color"></div>
 <div class="detail-text">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</div>
 <!--PROFILE-->
-<div class="profile-area">
+<div class="profile-area"><br />
 	<span class="now-money-text">現在の支援総額</span>
 	<span class="future-money-text">目標金額</span><br />
 	<span class="now-money">4,000,000円</span>
 	<span class="future-money">8,000,000円</span><br />
-	<progress value="50" max="100"></progress>
-	<div class="now-patron-text">現在の支援者数</div>
-	<div class="now-patron">120人</div>
+	<div id="myProgress">
+  <div id="myBar"></div>
 </div>
+  <div align="center" id="pacent">0%</div>
+	<div align="center" class="now-patron-text">現在の支援者数</div>
+	<div align="center" class="now-patron">120人</div><br />
+</div><br />
 <!--MORE PROFILE-->
 <div class="more-profile-area">
-	<div class="arrow-and-text"></div>
-</div>
-
-<div class="fixed-menu-with-icon">このプロジェクトに納税する</div>
+	<div class="arrow-and-text"><img src="images/arrow-down.jpg" width="12%">平山 太郎</div>
+</div><br /><br /><br /><br />
+<div id="">
+<div class="fixed-menu-with-icon" onclick="updateProgress()"><img src="images/money.png" width="12%">このプロジェクトに納税する</div>
 <!--ここまで中身-->
-
-
+<script type="text/javascript">
+var width = 1; 
+function updateProgress () {
+	width++;
+    var elem = document.getElementById("myBar"); 
+    elem.style.width = width + '%'; 
+    per = document.getElementById("pacent");
+    per.innerHTML = width + "%";
+}
+</script>
 </body>
 </html>
