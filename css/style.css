@@ -252,26 +252,6 @@ div# explan {
     background - color: #D37121;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    width: 100 %;
-    height: 10 vh;
-    background: #D37121;
-    display: flex;
-    justify - content: center;
-    align - items: center;
-}
-
-h2 {
-    font - size: 1.5e m;
-    color: #fff;
-    text - align: center;
-}
-
 .grid {
     padding: 50 px;
     text - align: center;
@@ -310,7 +290,7 @@ h2 {
     position: relative;
 }
 
-.content {
+.content-main {
     top: 70 px;
     position: relative;
 }
