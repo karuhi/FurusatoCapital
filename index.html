@@ -3,5 +3,35 @@
   <head>
     </head>
   <body>
+    <script>
+      function XmlHttprequest(){
+
+  if(window.XMLHttpRequest){
+    httpObj = new XMLHttpRequest();
+  }else if(window.ActiveXObject){
+    httpObj = new XMLHttpRequest('MSXML2.XMLHTTP.3.0');
+  }
+  httpObj.onreadystatechange = display;
+  httpObj.open("GET", "sample.txt",true);
+  httpObj.send(null);
+}
+
+//表示に関する関数
+function display(){
+
+ if(httpObj.readyState == 4 && httpObj.status == 200){
+  //id"print"のhtml情報を変更する
+  document.getElementById("print").innerHTML = httpObj.responseText;
+ }
+}
+
+//bodyで読み込むための関数
+function init(){
+
+ docuemnt.getElementById("button").onclick = XmlHttpRequest;
+}
+      </script>
+    <button id="button">button</button>
+    <div id="print">printarea</div>
   </body>
 </html>
