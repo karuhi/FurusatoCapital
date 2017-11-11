@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    </head>
-  <body>
+
+<head>
+</head>
+
+<body>
     <script>
-      function XmlHttprequest(){
+    function XmlHttprequest() {
 
-  if(window.XMLHttpRequest){
-    httpObj = new XMLHttpRequest();
-  }else if(window.ActiveXObject){
-    httpObj = new XMLHttpRequest('MSXML2.XMLHTTP.3.0');
-  }
-  httpObj.onreadystatechange = display;
-  httpObj.open("GET", "http://ec2-54-64-159-57.ap-northeast-1.compute.amazonaws.com:7700/dataspider/trigger/list",true);
-  httpObj.send(null);
-}
+        if (window.XMLHttpRequest) {
+            httpObj = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            httpObj = new XMLHttpRequest('MSXML2.XMLHTTP.3.0');
+        }
+        httpObj.onreadystatechange = display;
+        httpObj.open("GET", "http://ec2-54-64-159-57.ap-northeast-1.compute.amazonaws.com:7700/dataspider/trigger/list", true);
+        httpObj.send(null);
+    }
 
-//表示に関する関数
-function display(){
+    //表示に関する関数
+    function display() {
 
- if(httpObj.readyState == 4 && httpObj.status == 200){
-  //id"print"のhtml情報を変更する
-  document.getElementById("print").innerHTML = httpObj.responseText;
- }
-}
+        if (httpObj.readyState == 4 && httpObj.status == 200) {
+            //id"print"のhtml情報を変更する
+            document.getElementById("print").innerHTML = httpObj.responseText;
+        }
+    }
 
-//bodyで読み込むための関数
-function init(){
-
- docuemnt.getElementById("button").onclick = XmlHttpRequest;
-}
-      </script>
-    <button onclick="init()">aaa</button>
-    <button id="button">button</button>
+    //bodyで読み込むための関数
+    function init() {
+        alert();
+        docuemnt.getElementById("button").onclick = XmlHttpRequest;
+    }
+    </script>
+    <input id="button">button</input>
     <div id="print">printarea</div>
-  </body>
+</body>
+
 </html>
