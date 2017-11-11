@@ -4,17 +4,13 @@ $('button.detail').click(function () {
 	}, 1000);
 	$('img.door_right').animate({
 		'marginLeft':'-102%'
-	}, 1000);
-
-	$('video').show();
+	}, 1200);
 });
 
 $('button.skip').click(function() {
-	$('video').hide();
-
 	$('img.door_right').animate({
 		'marginLeft':'0'
-	}, 1000);
+	}, 1200);
 	$('img.door_left').animate({
 		'marginLeft':'0',
 	}, 1000);
