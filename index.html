@@ -14,7 +14,7 @@
             httpObj = new XMLHttpRequest('MSXML2.XMLHTTP.3.0');
         }
         httpObj.onreadystatechange = display;
-        httpObj.open("GET", "https://ec2-54-64-159-57.ap-northeast-1.compute.amazonaws.com:7700/dataspider/trigger/list", true);
+        httpObj.open("GET", "http://ec2-54-64-159-57.ap-northeast-1.compute.amazonaws.com:7700/dataspider/trigger/list", true);
         httpObj.send(null);
     }
 
