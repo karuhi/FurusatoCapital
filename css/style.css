@@ -20,7 +20,7 @@ h2 {
 
 div.elevator {
 	position: relative;
-	z-index: 999;
+	z-index: 99;
 	width: 100%;
 	height: 80vh;
 	display: flex;
