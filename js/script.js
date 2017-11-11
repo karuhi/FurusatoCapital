@@ -93,13 +93,18 @@ $('div.bad').click(function(){
 });
 
 var width = 1; 
-
+var cnt = 0;
 function updateProgress () {
 	width++;
 	var elem = document.getElementById("myBar"); 
 	elem.style.width = width + '%'; 
 	per = document.getElementById("pacent");
 	per.innerHTML = width + "%";
+	
+	var ml = ["10000","20000","30000","40000","50000","60000","70000","80000","90000","100000"];
+	cnt++;
+		var eke = document.getElementById("money_cnt");
+		eke.innerHTML = ml[cnt];
 }
 
 $('div.arrow-and-text').click(function(){
