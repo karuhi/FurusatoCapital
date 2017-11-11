@@ -10,12 +10,54 @@
 <header>
 	<h2>平山 太郎</h2>
 </header>
+<div class="detail">
+	<div class="detail_header">
+		<div class="bad"><img src="images/close.png" width="30%"></div>
+		<div class="project_name">
+			<p>地域の名産品を使った料理とお酒を楽しめるバーを開店したい。</p>
+		</div>
+	</div>
+	<!--TOP-->
+	<div class="detail-text">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</div>
+	<!--PROFILE-->
+	<div class="profile-area">
+		<div class="values">
+			<div class="now-money">
+				<p class="caption">現在の支援総額</p>
+				<p class="value">4,000,000円</p>
+			</div>
+			<div class="future-money">
+				<p class="caption">目標金額</p>
+				<p class="value">8,000,000円</p>
+			</div>
+		</div>
+		<div id="myProgress">
+			<div id="myBar"></div>
+		</div>
+		<div align="center" id="pacent">0%</div>
+		<div class="now-patron">
+			<p class="caption">現在の支援者数</p>
+			<p class="now-patron-value">120人</p>
+		</div>
+	</div><br />
+	<!--MORE PROFILE-->
+	<div class="more-profile-area">
+		<div class="arrow-and-text" onclick="openExplan()">
+			<p>平山 太郎</p>
+		</div>
+	</div>
+	<div id="explan"></div>
+	<div class="fixed-menu-with-icon" onclick="updateProgress()">
+		<p>このプロジェクトに納税する</p>
+	</div>
+</div>
 <div class="content">
 	<div class="elevator">
 		<img src="images/door_left.png" class="door_left">
 		<img src="images/door_right.png" class="door_right">
 	</div>
-	<video src="https://karuh.tk/home/js/furu/movie.mp4"><p>ご利用のブラウザはvideo タグによる動画の再生に対応していません。</p></video>
+	<!-- <video src="https://karuh.tk/home/js/furu/movie.mp4"><p>ご利用のブラウザはvideo タグによる動画の再生に対応していません。</p></video> -->
+	<video src="https://karuh.tk/home/js/furu/movie.mp4" controls="controls" autoplay><p>ご利用のブラウザはvideo タグによる動画の再生に対応していません。</p></video>
 	<div class="buttons">
 		<button class="skip">スキップ</button>
 		<button class="detail">詳細を見る</button>
