@@ -111,6 +111,23 @@ progress::-webkit-progress-value {background-color: #D37121 !important;border-ra
 </div><div id="explan"></div><br /><br /><br />
 <div class="fixed-menu-with-icon" onclick="updateProgress()"><img class="arrow-and-img" src="images/money.png" width="12%">このプロジェクトに納税する</div>
 <!--ここまで中身-->
+<div id="modal-1" aria-hidden="true">
+  <div tabindex="-1" data-micromodal-close>
+    <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+      <header>
+        <h2 id="modal-1-title">
+          Modal Title
+        </h2>
+        <button aria-label="Close modal" data-micromodal-close></button>
+      </header>
+      <div id="modal-1-content">
+        Modal Content
+      </div>
+
+    </div>
+  </div>
+</div>
+	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script type="text/javascript">
 var width = 1; 
 function updateProgress () {
@@ -130,6 +147,9 @@ function openExplan () {
  elem = document.getElementById("explan").innerHTML = " ";
  now_exp = 0;
 }
+
+}
+function modal (){
 
 }
 </script>
