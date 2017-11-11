@@ -1,296 +1,294 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    width: 100 %;
-    height: 10 vh;
-    background: #D37121;
-    display: flex;
-    justify - content: center;
-    align - items: center;
+  width: 100 %;
+  height: 10 vh;
+  background: #D37121;
+  display: flex;
+  justify - content: center;
+  align - items: center;
 }
 
 h2 {
-    font - size: 1.5e m;
-    color: #fff;
-    text - align: center;
+  font - size: 1.5e m;
+  color: #fff;
+  text - align: center;
 }
 
 div.content {
-    height: 80 vh;
-    overflow: hidden;
+  height: 80 vh;
+  overflow: hidden;
 }
 
 div.elevator {
-    position: relative;
-    z - index: 99;
-    width: 100 %;
-    height: 100 %;
-    display: flex;
-    flex - direction: row;
+  position: relative;
+  z - index: 99;
+  width: 100 %;
+  height: 100 %;
+  display: flex;
+  flex - direction: row;
 }
 
 video {
-    position: relative;
-    width: 100 %;
-    margin - top: -80 vh;
-    z - index: 50;
-    overflow: hidden;
+  position: relative;
+  width: 100 %;
+  margin - top: -80 vh;
+  z - index: 50;
+  overflow: hidden;
 }
 
-img.door_left,
-img.door_right {
-    width: 50 %;
-    height: 100 %;
+img.door_left, img.door_right {
+  width: 50 %;
+  height: 100 %;
 }
 
 div.buttons {
-    width: 100 %;
-    height: 10 vh;
-    z - index: 999;
-    display: flex;
-    flex - direction: row;
-    align - items: center;
-    bottom: 0;
-    position: fixed;
+  width: 100 %;
+  height: 10 vh;
+  z - index: 999;
+  display: flex;
+  flex - direction: row;
+  align - items: center;
+  bottom: 0;
+  position: fixed;
 }
 
 div.buttons>button {
-    width: 50 %;
-    height: 100 %;
-    font - size: 1.3e m;
-    border: none;
-    border - radius: 0;
+  width: 50 %;
+  height: 100 %;
+  font - size: 1.3e m;
+  border: none;
+  border - radius: 0;
 }
 
 div.buttons>button.skip {
-    background: #D8D8D8;
-    border - bottom: solid 5 px #919292;
+  background: #D8D8D8;
+  border - bottom: solid 5 px #919292;
 }
 
 div.buttons>button.detail {
-    background: # FF5E5E;
-    border - bottom: solid 5 px# BE4949;
-    color: #fff;
+  background: # FF5E5E;
+  border - bottom: solid 5 px# BE4949;
+  color: #fff;
 }
 
 div.detail {
-    position: relative;
-    width: 100 %;
-    display: none;
+  position: relative;
+  width: 100 %;
+  display: none;
 }
 
 
 /* for detail */
 
 div.detail_header {
-    position: relative;
-    background: url(.. / images / detail - image - hedder.jpg);
-    background - size: cover;
-    height: 250 px;
+  position: relative;
+  background: url(.. / images / detail - image - hedder.jpg);
+  background - size: cover;
+  height: 250 px;
 }
 
 div.project_name {
-    position: relative;
-    background: linear - gradient(rgba(0, 0, 0, 0), #D37121);
-    width: 100 %;
-    height: 100 %;
+  position: relative;
+  background: linear - gradient(rgba(0, 0, 0, 0), #D37121);
+  width: 100 %;
+  height: 100 %;
 }
 
 div.project_name>p {
-    height: 30 px;
-    color: #fff;
-    font - size: 20 px;
-    padding: 170 px 20 px 30 px;
+  height: 30 px;
+  color: #fff;
+  font - size: 20 px;
+  padding: 170 px 20 px 30 px;
 }
 
 div.detail - text {
-    font - size: 15 px;
-    margin: 20 px 30 px;
+  font - size: 15 px;
+  margin: 20 px 30 px;
 }
 
 .profile - area {
-    font - size: 15 px;
-    margin - left: 30 px;
-    margin - right: 30 px;
+  font - size: 15 px;
+  margin - left: 30 px;
+  margin - right: 30 px;
 }
 
 div.values {
-    width: 100 %;
-    display: flex;
-    flex - direction: row;
+  width: 100 %;
+  display: flex;
+  flex - direction: row;
 }
 
 div.values>div {
-    width: 50 %;
-    margin: 10 px 0;
-    padding: 0;
+  width: 50 %;
+  margin: 10 px 0;
+  padding: 0;
 }
 
 div.values>div>p {
-    font - size: 15 px;
-    width: 100 %;
-    text - align: center;
+  font - size: 15 px;
+  width: 100 %;
+  text - align: center;
 }
 
 div.values>div>p.value {
-    font - size: 18 px;
-    font - weight: bold;
+  font - size: 18 px;
+  font - weight: bold;
 }
 
 div.now - patron {
-    width: 100 %;
-    padding: 10 px 0;
-    margin: 0 auto;
+  width: 100 %;
+  padding: 10 px 0;
+  margin: 0 auto;
 }
 
 div.now - patron>p {
-    text - align: center;
+  text - align: center;
 }
 
 div.now - patron>p.caption {
-    font - size: 15 px;
+  font - size: 15 px;
 }
 
 div.now - patron>p.now - patron - value {
-    font - size: 17 px;
-    font - weight: bold;
+  font - size: 17 px;
+  font - weight: bold;
 }
 
 .fixed - menu - with - icon {
-    position: fixed;
-    bottom: 0;
-    background: #FF5E5E;
-    width: 100 %;
-    height: 80 px;
+  position: fixed;
+  bottom: 0;
+  background: #FF5E5E;
+  width: 100 %;
+  height: 80 px;
 }
 
 .fixed - menu - with - icon p {
-    height: 80 px;
-    background - image: url(.. / images / money.png);
-    background - size: 60 px;
-    background - position: 10 px center;
-    background - repeat: no - repeat;
-    padding - left: 85 px;
-    color: #fff;
-    font - size: 21 px;
-    line - height: 80 px;
+  height: 80 px;
+  background - image: url(.. / images / money.png);
+  background - size: 60 px;
+  background - position: 10 px center;
+  background - repeat: no - repeat;
+  padding - left: 85 px;
+  color: #fff;
+  font - size: 21 px;
+  line - height: 80 px;
 }
 
 .profile - area {
-    margin - top: 10 px;
-    background: #D8D8D8;
+  margin - top: 10 px;
+  background: #D8D8D8;
 }
 
 .bad {
-    top: 10 px;
-    left: 10 px;
-    position: fixed;
-    z - index: 3;
+  top: 10 px;
+  left: 10 px;
+  position: fixed;
+  z - index: 3;
 }
 
 progress {
-    background - color: #FF5E5E;
-    width: 80 %;
-    border - radius: 2 px;
-    background - size: 35 px 20 px, 100 % 100 %, 100 % 100 %;
-    margin - left: 10 %;
-    margin - right: 10 %;
-    border - radius: 10 px;
+  background - color: #FF5E5E;
+  width: 80 %;
+  border - radius: 2 px;
+  background - size: 35 px 20 px, 100 % 100 %, 100 % 100 %;
+  margin - left: 10 %;
+  margin - right: 10 %;
+  border - radius: 10 px;
 }
 
 progress::-webkit - progress - bar {
-    background - color: gray;
-    width: 100 %;
-    border - radius: 10 px;
+  background - color: gray;
+  width: 100 %;
+  border - radius: 10 px;
 }
 
 progress::-webkit - progress - value {
-    background - color: #D37121!important;
-    border - radius: 10 px;
+  background - color: #D37121!important;
+  border - radius: 10 px;
 }
 
 div.more - profile - area {
-    margin: 0 30 px;
-    height: 30 px;
+  margin: 0 30 px;
+  height: 30 px;
 }
 
 div.arrow - and - text {
-    background: url(.. / images / arrow - down.jpg);
-    background - repeat: no - repeat;
-    background - size: 30 px;
-    padding - left: 40 px;
-    border - bottom: dashed 1 px #474747;
+  background: url(.. / images / arrow - down.jpg);
+  background - repeat: no - repeat;
+  background - size: 30 px;
+  padding - left: 40 px;
+  border - bottom: dashed 1 px #474747;
 }
 
 div.arrow-and-text p {
-    height: 30px;
-    line-height: 18px;
+  height: 30px;
+  line-height: 18px;
 }
 
 div# explan {
-    margin: 10 px 30 px;
-    padding - bottom: 80 px;
+  margin: 10 px 30 px;
+  padding - bottom: 80 px;
 }
 
-.now - money - text,
-.now - money {
-    padding - left: 30 px;
-    margin - right: 30 px;
+.now - money - text, .now - money {
+  padding - left: 30 px;
+  margin - right: 30 px;
 }
 
 # myProgress {
-    width: 100 %;
-    background - color: grey;
+  width: 100 %;
+  background - color: grey;
 }
 
 # myBar {
-    width: 1 %;
-    height: 30 px;
-    background - color: #D37121;
+  width: 1 %;
+  height: 30 px;
+  background - color: #D37121;
 }
 
 .grid {
-    padding: 50 px;
-    text - align: center;
-    margin: 0 0 0 px 0;
-    font - size: 40 px;
+  padding: 50 px;
+  text - align: center;
+  margin: 0 0 0 px 0;
+  font - size: 40 px;
 }
 
 .grid: after {
-    content: "";
-    clear: both;
-    display: block;
-    visibility: hidden;
-    height: 0;
+  content: "";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
 }
 
 .grid - harf {
-    float: left;
-    overflow: hidden;
-    padding: 20 px 20 px 1e m 0;
-    margin: 0 0 % 0 0;
-    width: 40 %;
-    background - color: #D8D8D8;
+  float: left;
+  overflow: hidden;
+  padding: 20 px 20 px 1e m 0;
+  margin: 0 0 % 0 0;
+  width: 40 %;
+  background - color: #D8D8D8;
 }
 
 .grid - harf: nth - last - child(2) {
-    margin: 0;
+  margin: 0;
 }
 
 .grid - harf: last - child {
-    float: right;
-    margin: 0;
+  float: right;
+  margin: 0;
 }
 
 .logo {
-    top: 40 px;
-    position: relative;
+  top: 40 px;
+  position: relative;
 }
 
 .content-main {
-    top: 70 px;
-    position: relative;
+  top: 70 px;
+  position: relative;
 }
