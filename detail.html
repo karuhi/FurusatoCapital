@@ -12,6 +12,46 @@
 	margin: 0;
 	padding: 0;
 }
+.cover-color{
+	top: 0;
+	position: fixed;
+	background:linear-gradient(rgba(0,0,0,0),#D37121);
+	width: 100%;
+	height: 48%;
+
+}
+.image-hedder{
+	top:35%;
+	position: fixed;
+	color: white;
+	z-index: 2;
+	font-size: 40px;
+	margin-left: 20px; 
+	margin-right: 20px;
+}
+.detail-text , .profile-area{
+	font-size:20px;
+	margin-left: 30px; 
+	margin-right: 30px;
+}
+.fixed-menu-with-icon {
+	position: fixed;
+	bottom: 0;
+	background: #D37121;
+	width: 100%;
+	height: 10%;
+	font-size: 40px;
+	text-align: center;
+	border-top: 20px;
+	border-bottom: 20px;
+}
+.profile-area{
+	background: #D8D8D8;
+}
+.future-money-text {
+text-align: center;
+margin: 0px auto;
+}
 </style>
 </head>
 <body>
@@ -19,12 +59,26 @@
 <!--ここから中身-->
 
 <!--TOP-->
-<div class="image-hedder"><img src="images/detail-image-hedder.jpg" /></div>
+<img src="images/detail-image-hedder.jpg"  width="100%" />
+<div class="image-hedder">地域の名産品を使った料理とお酒を楽しめるバーを開店したい。</div>
 <div class="cover-color"></div>
-<div class="cover-text"></div>
+<div class="detail-text">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</div>
 <!--PROFILE-->
+<div class="profile-area">
+	<span class="now-money-text">現在の支援総額</span>
+	<span class="future-money-text">目標金額</span><br />
+	<span class="now-money">4,000,000円</span>
+	<span class="future-money">8,000,000円</span><br />
+	<progress value="50" max="100"></progress>
+	<div class="now-patron-text">現在の支援者数</div>
+	<div class="now-patron">120人</div>
+</div>
+<!--MORE PROFILE-->
+<div class="more-profile-area">
+	<div class="arrow-and-text"></div>
+</div>
 
-
+<div class="fixed-menu-with-icon">このプロジェクトに納税する</div>
 <!--ここまで中身-->
 
 
