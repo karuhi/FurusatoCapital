@@ -1,1 +1,69 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 
+header {
+	width: 100%;
+	height: 10vh;
+	background: #D37121;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	font-size: 1.5em;
+	color: #fff;
+	text-align: center;
+}
+
+div.elevator {
+	position: relative;
+	z-index: 999;
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+}
+
+video {
+	position: relative;
+	width: 100%;
+	margin-top: -80vh;
+	display: none;
+}
+
+img.door_left, img.door_right {
+	width: 50%;
+	height: 100%;
+}
+
+div.buttons {
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	bottom: 0;
+	position: fixed;
+}
+
+div.buttons > button {
+	width: 50%;
+	height: 100%;
+	font-size: 1.3em;
+	border: none;
+	border-radius: 0;
+}
+
+div.buttons > button.skip {
+	background: #D8D8D8;
+	border-bottom: solid 5px #919292;
+}
+
+div.buttons > button.detail {
+	background: #FF5E5E;
+	border-bottom: solid 5px #BE4949;
+	color: #fff;
+}
