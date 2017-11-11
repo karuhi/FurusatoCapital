@@ -2,40 +2,92 @@
 <html>
 
 <head>
-    <meta name="referrer" content="origin">
-<meta name="referrer" content="strict-origin">
+    <title>ふるさとキャピタル</title>
+   <link rel="icon" href="./icon.png" type="image/png">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        width: 100%;
+        height: 10vh;
+        background: #D37121;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2 {
+        font-size: 1.5em;
+        color: #fff;
+        text-align: center;
+    }
+    .grid {
+        padding: 50px;
+        text-align: center;
+        margin: 0 0 0px 0;
+        font-size: 40px;
+    }
+    .grid:after {
+        content: "";
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+    .grid-harf {
+        float: left;
+        overflow: hidden;
+        padding: 20px 20px 1em 0;
+        margin: 0 0% 0 0;
+        width: 40%;
+        background-color: #D8D8D8;
+    }
+    .grid-harf:nth-last-child(2) {
+        margin: 0;
+    }
+    .grid-harf:last-child {
+        float: right;
+        margin: 0;
+    }
+    .logo {
+        top: 40px;
+        position: relative;
+    }
+    .content {
+        top: 70px;
+        position: relative;
+    }
+    </style>
 </head>
 
 <body>
-    <script>
-    function XmlHttprequest() {
-
-        if (window.XMLHttpRequest) {
-            httpObj = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            httpObj = new XMLHttpRequest('MSXML2.XMLHTTP.3.0');
-        }
-        httpObj.onreadystatechange = display;
-        httpObj.open("GET", "http://ec2-54-64-159-57.ap-northeast-1.compute.amazonaws.com:7700/dataspider/trigger/iyada", true);
-        httpObj.send(null);
-    }
-
-    //表示に関する関数
-    function display() {
-
-        if (httpObj.readyState == 4 && httpObj.status == 200) {
-            //id"print"のhtml情報を変更する
-            document.getElementById("print").innerHTML = httpObj.responseText;
-        }
-    }
-
-    //bodyで読み込むための関数
-    function init() {
-        alert();
-        docuemnt.getElementById("button").onclick = XmlHttpRequest;
-    }
-    </script>
-    <button onclick="XmlHttprequest()">button</button>
-    <div id="print">printarea</div>
-</body>
+    <header>
+        <img class="logo" src="images/logo.png">
+    </header>
+    <div class="content">
+        <div class="grid">
+            <div id="1" class="grid-harf" onclick="selecter(this);"><img class="grid-img" src="images/grid-it.png" width="256px" />
+                <br />IT関連</div>
+            <div id="2" class="grid-harf" onclick="selecter(this);"><img class="grid-img" src="images/grid-school.png" width="256px" />
+                <br />学生起業家</div>
+        </div>
+        <div class="grid">
+            <div class="grid-harf"><img class="grid-img" src="images/grid-rest.png" width="256px" />
+                <br />飲食店開業</div>
+            <div class="grid-harf"><img class="grid-img" src="images/grid-it.png" width="256px" />
+                <br />IT関連</div>
+        </div>
+        <div class="grid">
+            <div class="grid-harf"><img class="grid-img" src="images/grid-school.png" width="256px" />
+                <br />学生起業家</div>
+            <div class="grid-harf"><img class="grid-img" src="images/grid-more.png" width="256px" />
+                <br />もっと見る</div>
+        </div>
+    </div>
+<script type="text/javascript">
+function selecter(ele) {
+window.location.href = "elevator.html";
+}
+</script>
 </html>
